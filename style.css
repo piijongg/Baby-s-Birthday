@@ -31,13 +31,14 @@ body {
   }
   
   #candle {
-    position: absolute;
-    left: calc(50% - .75em);
-    bottom: 35%;
-    width: 1.5em;
-    height: 10em;
-    overflow: hidden;
-  }
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 35%;
+  width: 1.5em;
+  height: 10em;
+  overflow: hidden;
+}
   #candle::before {
     position: absolute;
     bottom: 0;
@@ -236,3 +237,41 @@ body {
     top: 8.7em;
     opacity: 0.6;
   }
+
+  @media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+    width: 90%;
+    bottom: 10%;
+  }
+
+  #candle {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.5em;
+    height: 10em;
+    bottom: 40%;
+  }
+
+  .stripe {
+    width: 2em;
+    left: -0.25em;
+  }
+
+  #top #flame {
+    width: 1.2em;
+    height: 1.3em;
+  }
+
+  #top #flame::after {
+    width: 0.6em;
+    height: 0.8em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #top .smoke {
+    width: 0.4em;
+    height: 0.4em;
+  }
+}
